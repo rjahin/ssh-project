@@ -1,3 +1,5 @@
+#!/bin/bash
+#here 2>&1 means send stderr(2) to wheereever stdout(1) is going
 servers=()
 while true; do
     echo " "
@@ -24,6 +26,16 @@ while true; do
                 echo " "
             done
             ;;
+        3) 
+            for ip in "${servers[@]}"; do
+                if ping -c 1 -W 2 $ip > /dev/null 2>&1; then #we will not see the ping output
+                    echo "$ip is UP!"
+                else 
+                    echo "$ip is DOWN!"
+                fi
+            done
+            ;;
     esac
 
 done
+
