@@ -19,12 +19,12 @@ A simple interactive Bash script for managing a list of servers from the termina
  
 1. Make the script executable:
 ```bash
-   chmod +x server_manager.sh
+   chmod +x ssh.sh
 ```
  
 2. Run it:
 ```bash
-   ./server_manager.sh
+   ./ssh.sh
 ```
  
 3. Choose an option from the menu by typing its number and pressing Enter.
